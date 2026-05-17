@@ -702,6 +702,115 @@ footer {
   </div>
 </header>
 
+<!-- ══ SCROLLING OFFER BANNER ══ -->
+<style>
+.offer-banner{
+  background:linear-gradient(135deg,#0d1b4b 0%,#162566 40%,#7b1fa2 100%);
+  background-size:300% 100%;
+  animation:bnr-shift 6s ease infinite;
+  overflow:hidden;
+  border-top:1px solid rgba(255,255,255,0.06);
+  border-bottom:4px solid #f9a825;
+  box-shadow:0 4px 24px rgba(123,31,162,0.35);
+  position:relative;z-index:998;
+}
+@keyframes bnr-shift{
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+.offer-track{
+  display:flex;width:max-content;
+  animation:bnr-scroll 32s linear infinite;
+  padding:0;align-items:center;
+}
+.offer-track:hover{animation-play-state:paused;cursor:default}
+@keyframes bnr-scroll{
+  0%{transform:translateX(0)}
+  100%{transform:translateX(-50%)}
+}
+.oi{
+  display:inline-flex;align-items:center;gap:10px;
+  padding:10px 30px;white-space:nowrap;
+  color:rgba(255,255,255,0.92);font-size:13.5px;font-weight:500;
+}
+
+/* ── PRICE BADGE ── most dominant element */
+.oi-price{
+  display:inline-flex;align-items:baseline;gap:2px;
+  background:#f9a825;
+  color:#1a0000;
+  border-radius:6px;
+  padding:5px 14px;
+  font-size:19px;font-weight:900;letter-spacing:-0.5px;
+  box-shadow:0 0 0 3px rgba(249,168,37,0.35),0 4px 18px rgba(249,168,37,0.55);
+  animation:price-glow 1.6s ease-in-out infinite;
+  position:relative;
+}
+@keyframes price-glow{
+  0%,100%{box-shadow:0 0 0 3px rgba(249,168,37,0.35),0 4px 18px rgba(249,168,37,0.55);transform:scale(1)}
+  50%{box-shadow:0 0 0 6px rgba(249,168,37,0.2),0 8px 28px rgba(249,168,37,0.75);transform:scale(1.1)}
+}
+.oi-price sup{font-size:12px;font-weight:900;margin-right:1px}
+.oi-price .only{font-size:11px;font-weight:700;margin-left:4px;opacity:0.8;text-transform:uppercase;letter-spacing:1px}
+
+/* ── AMC label ── */
+.oi-tag{
+  background:rgba(249,168,37,0.18);
+  border:1px solid rgba(249,168,37,0.45);
+  color:#f9a825;
+  border-radius:4px;padding:3px 10px;
+  font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;
+}
+
+/* ── check items ── */
+.oi-check{
+  display:inline-flex;align-items:center;gap:7px;
+  color:rgba(255,255,255,0.88);font-size:13px;font-weight:500;
+}
+.oi-check b{
+  width:19px;height:19px;min-width:19px;
+  background:rgba(249,168,37,0.25);color:#f9a825;
+  border-radius:50%;display:inline-flex;align-items:center;
+  justify-content:center;font-size:10px;font-weight:900;
+}
+
+/* ── separators ── */
+.oi-star{color:#f9a825;font-size:12px;padding:0 6px;opacity:.8}
+.oi-pipe{color:rgba(255,255,255,0.25);padding:0 4px;font-size:18px}
+</style>
+
+<div class="offer-banner">
+  <div class="offer-track">
+    <!-- set 1 -->
+    <span class="oi"><span class="oi-tag">🔥 Special Offer</span> Annual Maintenance Contract (AMC) Starting @ <span class="oi-price"><sup>₹</sup>799<span class="only">Only</span></span></span>
+    <span class="oi-star">★</span>
+    <span class="oi"><span class="oi-check"><b>✓</b> Fast Support</span></span>
+    <span class="oi-pipe">|</span>
+    <span class="oi"><span class="oi-check"><b>✓</b> Expert Service</span></span>
+    <span class="oi-pipe">|</span>
+    <span class="oi"><span class="oi-check"><b>✓</b> Affordable Plans</span></span>
+    <span class="oi-star">★</span>
+    <span class="oi">📞 <strong style="color:#f9a825">9958070546</strong> &nbsp;|&nbsp; <strong style="color:#f9a825">8802653636</strong></span>
+    <span class="oi-star">★</span>
+    <span class="oi"><span class="oi-check"><b>✓</b> Trusted by 500+ Businesses · Delhi & NCR</span></span>
+    <span class="oi-star">★</span>
+    <!-- set 2 — seamless loop -->
+    <span class="oi"><span class="oi-tag">🔥 Special Offer</span> Annual Maintenance Contract (AMC) Starting @ <span class="oi-price"><sup>₹</sup>799<span class="only">Only</span></span></span>
+    <span class="oi-star">★</span>
+    <span class="oi"><span class="oi-check"><b>✓</b> Fast Support</span></span>
+    <span class="oi-pipe">|</span>
+    <span class="oi"><span class="oi-check"><b>✓</b> Expert Service</span></span>
+    <span class="oi-pipe">|</span>
+    <span class="oi"><span class="oi-check"><b>✓</b> Affordable Plans</span></span>
+    <span class="oi-star">★</span>
+    <span class="oi">📞 <strong style="color:#f9a825">9958070546</strong> &nbsp;|&nbsp; <strong style="color:#f9a825">8802653636</strong></span>
+    <span class="oi-star">★</span>
+    <span class="oi"><span class="oi-check"><b>✓</b> Trusted by 500+ Businesses · Delhi & NCR</span></span>
+    <span class="oi-star">★</span>
+  </div>
+</div>
+
 <!-- HERO -->
 <section class="hero" id="home">
   <div class="hero-shapes">
