@@ -1,0 +1,8 @@
+# robots.txt for Infosystem NCR
+# https://infosystemncr.github.io/InfosystemNCR/
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://infosystemncr.github.io/InfosystemNCR/sitemap.xml
